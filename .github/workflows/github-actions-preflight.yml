@@ -1,0 +1,24 @@
+on: [workflow_dispatch]
+
+name: GitHub Actions Ipynb
+jobs:
+  ipynb_for_publishing:
+    runs-on: ubuntu-latest
+    name: Ipynb for publishing
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: check markdown
+        id: preflight
+        uses: c2dh/journal-of-digital-history-ipynb-preflight-action@master
+        with:
+          notebook: 'author_guideline_template.ipynb'
+          functions: 'checkcitation,checkoutput,checkhtml,checkjavascript,checktags,checkurls'
+          output_md: 'report.md'
+      # Use the output from the `preflight` step
+      - name: Use the output
+        run: echo "number of cells ${{ steps.preflight.outputs.size }} - output ${{ steps.preflight.outputs.checkmd }}"
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: '*.md'
