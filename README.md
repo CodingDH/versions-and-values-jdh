@@ -15,6 +15,11 @@ The preflight action generates a report within the repository that contains info
 
 The preflight action generates or updates a report markdown file in the repository that provides information about the adherence of the article to the submission guidelines, usually named `report.md`
 
+`requirements.txt` - stores information about all the libraries, modules, and packages in itself that are used while developing a particular project.
+
+`runtime.txt` - specify the version of the runtime (e.g. the version of Python ). Have python-x.y in runtime.txt to run the repository with Python version x.y
+
+
 ## Getting Started
 
 This repository it's a _template_, that is, it can be used as a starting point for new repositories.
@@ -38,8 +43,8 @@ The preflight action will generate a report in the repository that provides info
 
 ## MyBinder
 
-The repository also contains a `requirements.txt` file that can be used to create a MyBinder environment. Check: https://mybinder.readthedocs.io/en/latest/using/config_files.html#preparing-a-repository-for-binder
-The MyBinder environment can be used to run the example notebook to test that the code runs smoothly.
+The repository also contains a `requirements.txt` and a `runtime.txt` file that can be used to create a MyBinder environment. Check: https://mybinder.readthedocs.io/en/latest/using/config_files.html#preparing-a-repository-for-binder
+The MyBinder environment can be used to run the example notebook to test that the code runs smoothly. 
 
 ## Contribution Guidelines
 
