@@ -4,7 +4,7 @@ name: GitHub Actions Ipynb for preflight
 jobs:
   ipynb_for_publishing:
     runs-on: ubuntu-latest
-    name: Ipynb for publishing
+    name: Ipynb preflight
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
