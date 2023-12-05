@@ -1,4 +1,4 @@
-# Report for author_guideline_template.ipynb ❤ 
+# Report for article.ipynb ❤ 
 
 ## Cell Counts   
 **all cells: 20 **  
@@ -15,8 +15,7 @@ code: 6
 
 
 ### Check Output Sizes and Rules
-  - No valid tags found for image output in cell 7
-- Table found in output of cell 19
+  - No valid tags found for image output  [Check here ](https://journalofdigitalhistory.org/en/notebook-viewer/JTJGcHJveHktZ2l0aHVidXNlcmNvbnRlbnQlMkZDMkRIJTJGdGVtcGxhdGVfcmVwb19KREglMkZtYWluJTJGYXJ0aWNsZS5pcHluYg==?idx=7)- Table found in output of cell 19
 > First words of input cell: df = pd.read_csv("https://raw.githubusercontent.com/lux-org/lux-datasets/master/data/college.csv") df
 
 Total output size: 12.14 KB
