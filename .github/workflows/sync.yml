@@ -9,9 +9,16 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Template Sync
-        uses: BernhardStrauss/actions-template-sync@v0.8.0
+     # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+        # https://github.com/actions/checkout#usage
+        # uncomment if you use submodules within the source repository
+        # with:
+        #   submodules: true
+
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v1
         with:
           source_repo: "https://github.com/CodingDH/template_repo_JDH/.git"
           source_branch: "main"
