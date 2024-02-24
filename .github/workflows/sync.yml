@@ -6,21 +6,21 @@ on:
       - main
 
 jobs:
-  sync:
+  repo-sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
-     # To use this repository's private action, you must check out the repository
+      # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
-        # https://github.com/actions/checkout#usage
-        # uncomment if you use submodules within the source repository
-        # with:
-        #   submodules: true
-
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v1
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            source_repo_path: AndreasAugustin/template
-            upstream_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_repo_path: CodingDH/template_repo_JDH
+          upstream_branch: main # defaults to main
+          pr_labels: template-sync
           
