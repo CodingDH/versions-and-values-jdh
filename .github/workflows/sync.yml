@@ -20,6 +20,7 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v1
         with:
-          source_repo: CodingDH/template_repo_JDH
-          source_branch: "main"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            source_repo_path: AndreasAugustin/template
+            upstream_branch: main
+          
